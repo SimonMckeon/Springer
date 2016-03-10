@@ -1,0 +1,17 @@
+// apply a natural box layout model to all elements, 
+// but allowing components to change
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// All elements in the flow of the document that proceed
+// other elements must receive a top margin of one line.
+// http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+* + * {
+  margin-top: 1.5rem;
+}
