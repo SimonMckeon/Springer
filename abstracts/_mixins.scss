@@ -1,9 +1,7 @@
-// Clearfix based on 
-// http://cssmojo.com/latest_new_clearfix_so_far/
-@mixin clearfix {
-    &::after {
-        clear: both;
-        content: '';
-        display: table;
-    }
+// A simple wrapper around a standard 
+// media query
+@mixin breakpoint($bp) {
+  @media #{$bp} {
+    @content;
+  }
 }
