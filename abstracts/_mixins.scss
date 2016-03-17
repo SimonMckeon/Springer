@@ -1,62 +1,9 @@
-// Use to style :hover, :focus and :active states.
-// 
-// example:
-// .selector {
-//   @include on-event() {
-//     text-decoration: underline;
-//   }
-// }
-//
-// outputs:
-// .selector:hover,
-// .selector:active,
-// .selector:focus {
-//   text-decoration: underline;
-// }
-@mixin on-event($self: false) {
-    @if $self {
-        &,
-        &:hover,
-        &:active,
-        &:focus {
-            @content;
-        }
-    } @else {
-        &:hover,
-        &:active,
-        &:focus {
-            @content;
-        }
+// Clearfix based on 
+// http://cssmojo.com/latest_new_clearfix_so_far/
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
     }
-}
-
-// Use to style an element when in the contect of another element
-// 
-// example:
-// .child {
-//   when-inside('.parent') {
-//     color: red;
-//   }
-// }
-// 
-// output:
-// .parent .child {
-//   color: red;
-// }
-@mixin when-inside($context) {
-    #{$context} & {
-        @content;
-    }
-}
-
-// Lightens the $color by mixing it with white
-// as specified by $percentage.
-@function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
-}
-
-// Darkens the $color by mixing it with black
-// as specified by $percentage.
-@function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
 }

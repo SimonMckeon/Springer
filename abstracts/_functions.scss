@@ -1,1 +1,11 @@
-// Functions go in this file.
+// Lightens the $color by mixing it with white
+// as specified by $percentage.
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+// Darkens the $color by mixing it with black
+// as specified by $percentage.
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
