@@ -1,3 +1,46 @@
+// Use to style :hover, :focus and :active states.
+// 
+// example:
+// .selector {
+//   @include on-event() {
+//     text-decoration: underline;
+//   }
+// }
+//
+// outputs:
+// .selector:hover,
+// .selector:active,
+// .selector:focus {
+//   text-decoration: underline;
+// }
+@mixin on-event() {
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+
+// Use to style an element when in the context of another element
+// 
+// example:
+// .child {
+//   @include when-inside('.parent') {
+//     color: red;
+//   }
+// }
+// 
+// output:
+// .parent .child {
+//   color: red;
+// }
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
 // A simple wrapper around a standard 
 // media query
 @mixin breakpoint($bp) {
@@ -5,3 +48,4 @@
     @content;
   }
 }
+
