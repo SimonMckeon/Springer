@@ -7,19 +7,19 @@ $line-height: 1.5;
 
 // Sizes defined by modular scale using 1.125 ratio
 // http://www.modularscale.com/?1&rem&1.125&web&text
-$font-size--h1: 2.027rem; 
-$font-size--h2: 1.80rem;
-$font-size--h3: 1.602rem;
-$font-size--h4: 1.424rem;
-$font-size--h5: 1.266rem;
-$font-size--h6: 1.125rem;
+$font-size-h1: 2.027rem; 
+$font-size-h2: 1.80rem;
+$font-size-h3: 1.602rem;
+$font-size-h4: 1.424rem;
+$font-size-h5: 1.266rem;
+$font-size-h6: 1.125rem;
 
 // Colors
-$color--dark: rgba(67, 63, 67, 1.0);
-$color--light: rgba(254, 254, 254, 1.0);
-$color--highlight: rgba(239, 94, 95, 1.0);
+$color-dark: rgba(67, 63, 67, 1.0);
+$color-light: rgba(254, 254, 254, 1.0);
+$color-highlight: rgba(239, 94, 95, 1.0);
 
 // Breakpoints
-$breakpoint--small: only screen and (max-device-width: 480px);
-$breakpoint--medium: only screen and (max-device-width: 960px);
-$breakpoint--large: only screen and (max-device-width: 1200px);
+$breakpoint-small: only screen and (max-device-width: 480px);
+$breakpoint-medium: only screen and (max-device-width: 960px);
+$breakpoint-large: only screen and (max-device-width: 1200px);
