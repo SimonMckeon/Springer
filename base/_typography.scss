@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  font-family: $font-stack;
   font-size: $font-size;
   line-height: $line-height;
   color: $color-dark;
@@ -33,10 +34,6 @@ h6 {
 }
 
 a {
-  color: $color-highlight;
+  color: $color-primary;
   text-decoration: none;
-
-  @include on-event() {
-    color: tint($color-highlight, 60%)
-  }  
 }
