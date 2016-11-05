@@ -1,18 +1,15 @@
-// Set the base font-size to allow better rem usability.
-// 1rem = 10px, 1.5rem = 15px, 2rem = 2px etc.
-$font-base: 62.5%;
+$font-base: 62.5%; // Base 10 for use with font-size mixin
 $font-stack: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$font-size: 1.6rem;
+$font-size: 1.6;
 $line-height: 1.5;
 
-// Sizes defined by modular scale using 1.125 ratio
-// http://www.modularscale.com/?1&rem&1.125&web&text
-$font-size-h1: 2.027rem; 
-$font-size-h2: 1.80rem;
-$font-size-h3: 1.602rem;
-$font-size-h4: 1.424rem;
-$font-size-h5: 1.266rem;
-$font-size-h6: 1.125rem;
+// No need for units, values passed in to fonr-size mixin
+$font-size-h1: 2.027;
+$font-size-h2: 1.80;
+$font-size-h3: 1.602;
+$font-size-h4: 1.424;
+$font-size-h5: 1.266;
+$font-size-h6: 1.125;
 
 // Colors
 $color-dark: rgba(67, 63, 67, 1.0);
@@ -23,3 +20,7 @@ $color-primary: rgba(239, 94, 95, 1.0);
 $breakpoint-small: only screen and (max-device-width: 480px);
 $breakpoint-medium: only screen and (max-device-width: 960px);
 $breakpoint-large: only screen and (max-device-width: 1200px);
+
+// z-index
+$z-front: 10;
+$z-back: -10;

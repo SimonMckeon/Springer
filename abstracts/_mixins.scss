@@ -4,3 +4,35 @@
   }
 }
 
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+// Hide element while allowing screenreaders to parse it
+@mixin hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+// Every psuedo element needs these. Let's stay DRY
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+// Rems with a px fallback
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
